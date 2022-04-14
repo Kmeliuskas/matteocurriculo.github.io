@@ -32,7 +32,14 @@ body {
    position: relative; 
    background: #fc4545;
    padding: 26px;
+   font-size: 0.98em;
 }
+
+.container .nav_direita {
+    position: relative; 
+    background: #fff;
+    padding: 40px;
+ }
 
 .texto_do_perfil {
     position: relative;
@@ -115,6 +122,7 @@ body {
 }
  
 /* Informações da (EDUCAÇÃO) */
+
 .info_contato.educacao li {
     margin-bottom: 15px;
 }
@@ -153,8 +161,129 @@ body {
     background: #fff;
 }
 
-.container .nav_direita {
-   position: relative; 
-   background: #fff;
-   padding: 40px;
+
+
+/* Formatações do Sobre */
+.sobre {
+   margin-bottom: 50px; 
+}
+
+.sobre:last-child {
+   margin-bottom: 0px; 
+}
+
+.titulo2 {
+    color: #810202;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #680606;
+}
+
+.sobre .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0px;
+}
+
+.sobre .box .ano_empresa {
+    min-width: 150px;
+}
+
+.sobre .box .ano_empresa h5 {
+    text-transform: uppercase;
+    color: #848c90;
+}
+
+.sobre .box .texto h4 {
+    text-transform: uppercase;
+    color: lightcoral;
+    font-size: 16px;
+}
+
+/* Formatação das Qualificações */
+.qualificações .box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr; /* o 150px é pego da formatação (sobre .box .ano_empresa)  */
+    justify-content: center;
+    align-items: center;
+}
+
+.qualificações .box h4 {
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+
+.qualificações .box .porcentagem {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+
+.qualificações .box .porcentagem div {
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    background: #810202;
+}
+
+.qualificações.interesse {
+    margin-top: 20px;
+}
+
+.interesse ul {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.interesse ul li {
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.interesse ul li .fa {
+    color: #810202;
+    font-size: 18px;
+    width: 20px;
+}
+
+/* Queries */
+
+@media (max-width: 1000px) {
+    .container {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .interesse ul {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    
+    .sobre .box {
+        flex-direction: column;
+    }
+
+    .sobre .box .ano_empresa {
+        margin-bottom: 5px;
+    }
+
+    .interesse ul {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .qualificações .box {
+        grid-template-columns: repeat(1,1fr);
+    }
 }
