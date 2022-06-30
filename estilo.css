@@ -209,7 +209,7 @@ p {
     position: relative;
     width: 100%;
     display: grid;
-    grid-template-columns: 150px 1fr; /* o 150px é pego da formatação (sobre .box .ano_empresa)  */
+    grid-template-columns: 200px 1fr; /* o 150px é pego da formatação (sobre .box .ano_empresa)  */
     justify-content: center;
     align-items: center;
 }
@@ -251,7 +251,7 @@ p {
     margin: 10px 0;
 }
 
-.interesse ul li .fa {
+.interesse ul li .icone {
     color: #810202;
     font-size: 18px;
     width: 20px;
